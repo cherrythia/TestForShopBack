@@ -26,7 +26,6 @@ int main()
 		}
 	}
 
-
 	printf("Arrangement before it starts\n");
 	for (int i = 0; i < t; ++i)
 	{
@@ -36,7 +35,6 @@ int main()
 			} 
 		printf("\n");
 	}
-
 
 	printf("Manipulation starts here:\n");
 	//Re-Arrangement
@@ -62,7 +60,6 @@ int main()
 			}
 	}
 	
-
 	// Search for K and print the index out
 	for (int j = 0; j < t; ++j)
 	{
@@ -75,7 +72,6 @@ int main()
 			}
 		}
 	}
-
 
 	return 0;
 }
