@@ -11,20 +11,19 @@ int count = 0;
 int singulardrop(test) 
 {
 	++count;
-
 	test -= 1;
 	if(test != breaklvl){
 		return singulardrop(test);
 	}
 
 	else{
-		printf("Breaking point is found\n");
+		printf("Breaking point is found!!\n");
 		printf("Macbook1 breaks at = %d\n", test);
 		printf("Macbook2 survived at = %d\n", (test-1) );
 		printf("The number of times it has dropped %d\n", count);
 	}
 
-	return 0;
+	return 1;
 }
 
 //Interval testing - every 10th floor
@@ -50,6 +49,5 @@ int main()
 	int test = 10; //test starts from the 10th floor
 	intervaldrop(test);
 
-	/* code */
 	return 0;
 }
