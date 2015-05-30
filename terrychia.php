@@ -8,24 +8,6 @@
 // echo "Value of K = " . $K . "<br>";
 
 
-
-
-?>
-
-<form method="post" action="">
-<b>T Value: </b><input type="text" name="T">
-<input type="submit"> <br>
-<b>N Value: </b><input type="text" name="N">
-<b>K Value: </b><input type="text" name="K">
-<input type="submit">
-</form>
-
-<?php
-
-// echo $_POST['T'];
-// echo $_POST['N'];
-// echo $_POST['K'];
-
 $T = 2;
 $N = array(3,5);
 $K = array(1,2);
