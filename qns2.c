@@ -2,27 +2,10 @@
 #include <string.h>
 
 //define the floor that the macbook pro will break
-int breaklvl = 31;
+int breaklvl = 22;
 
 //Global variable
 int count = 0; 
-
-//Interval testing - every 10th floor
-int intervaldrop(test){
-		
-	++count;
-	
-	if(test < breaklvl)
-	{	
-		test += 10; 				//interval of tenth
-		return intervaldrop(test);
-	}
-	else{
-		singulardrop(test);
-	}
-
-	return 1;
-}
 
 //Singular testing = every single floor
 int singulardrop(test) 
@@ -41,7 +24,26 @@ int singulardrop(test)
 		printf("The number of times it has dropped %d\n", count);
 	}
 
+	return 0;
 }
+
+//Interval testing - every 10th floor
+int intervaldrop(test){
+		
+	++count;
+	
+	if(test < breaklvl)
+	{	
+		test += 10; 				//interval of tenth
+		return intervaldrop(test);
+	}
+	else{
+		singulardrop(test);
+	}
+
+	return 1;
+}
+
 
 int main()
 {	
