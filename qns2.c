@@ -6,13 +6,13 @@
 //2. Macbook pro drop below breaklvl will not break. 
 //3. Macbook pro drop at breaklvl and above breaklvl will break.
 
-#define breaklvl 44
+#define breaklvl 31
 
 /*----------------------Method-------------------------------*/
 //We test for the breaklvl at different intervals.
 //1. Test at every 10 level. 
 //2. Minus 5 level and test.
-//3. test at every single level. 
+//3. test at every single level.
 
 //Singular level test at every floor
 int singular(test,count){
@@ -28,7 +28,8 @@ int singular(test,count){
 		singular(test,count);
 	}
 	else{ //when they are equal print this
-		printf("Breaking point is found!\n");
+		
+		printf("Breaking level is found!\n");
 		printf("Macbook1 breaks at = %d\n", test);
 		printf("Macbook2 survived at = %d\n", (test-1) );
 		printf("The number of times it has dropped %d\n", count);
@@ -43,11 +44,11 @@ int intervaldrop(test,count){
 	if(test < breaklvl)
 	{	
 		test += 10; 					
-		return intervaldrop(test,count);
+		intervaldrop(test,count);
 	}
 	else{
-		count++;
 		test -= 5;					//minus 5 floors and test
+		count++;
 		singular(test,count);
 	}
 	return 1;
