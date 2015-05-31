@@ -13,6 +13,7 @@
 //1. Test at every 10 level. 
 //2. Minus 5 level and test.
 //3. test at every single level.
+//Worst case number of drop is 16 times at 91 and 99 level. The macbook pro will drop at 10,20,30,40,50,60,70,80,90,100,95,94,93,92,91,90.
 
 //Singular level test at every floor
 int singular(test,count){
@@ -27,12 +28,12 @@ int singular(test,count){
 		test -= 1;
 		singular(test,count);
 	}
-	else{ //when they are equal print this
+	else{	//when they are equal print this
 		
 		printf("Breaking level is found!\n");
 		printf("Macbook1 breaks at = %d\n", test);
 		printf("Macbook2 survived at = %d\n", (test-1) );
-		printf("The number of times it has dropped %d\n", count);
+		printf("The number of times it dropped %d\n", count);
 	}
 	return 1;
 }
